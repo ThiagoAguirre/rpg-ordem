@@ -1,237 +1,59 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>cyberpunk - terminal</title>
   <link rel="stylesheet" href="style.css">
-  <script src="index.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <title>Document</title>
 </head>
 
-<body>
-  <div id="windowsXP">
-    <!-- AREA DE TRABALHO (ICONES) -->
-    <div class="area-de-trabalho">
-
-      <!-- ICONE DA LIXEIRA -->
-      <div id="lixeira" class="desktop-icon">
-        <img
-          src="https://www.clipartmax.com/png/full/92-925325_modernxp-76-trash-full-icon-windows-xp-recycle-bin-icon-png.png">
-        <span>Lixeira</span>
-      </div>
-      <!-- ./ FECHA LIXEIRA -->
-      <!-- ICONE DO INTERNET EXPLORER -->
-      <div id="ie" class="desktop-icon">
-        <img src="https://files.tecnoblog.net/wp-content/uploads/2009/03/internet-explorer-8.png">
-        <span>Internet Explorer</span>
-      </div>
-      <!-- ./ FECHA IE -->
-
-    </div>
-    <!-- FECHA AREA DE TRABALHO -->
-
-    <!-- JANELA AVULSA -->
-    <div class="janela" data-status="restaurado">
-      <!-- BARRA DO TOPO -->
-      <div class="topBar">
-        <div class="title-bar">
-          <img width="20"
-            src="https://www.clipartmax.com/png/full/92-925325_modernxp-76-trash-full-icon-windows-xp-recycle-bin-icon-png.png">
-          <h2> Lixeira </h2>
-        </div>
-
-        <!-- AREA DOS BOTOES MINIMIZAR / MAX / FECHAR-->
-        <div class="area-buttons">
-          <button aria-label="Minimize"></button>
-          <button aria-label="Maximize"></button>
-          <button aria-label="Close"></button>
-        </div>
-
-      </div>
-      <!-- ./FECHA TOPO DA JANELA -->
-
-      <div class="janela_body">
-        <!-- ITEM DENTRO DA LIXEIRA -->
-        <div id="segredo" class="icon-lixo">
-          <img src="https://icons.iconarchive.com/icons/hopstarter/software/256/Windows-Media-Player-icon.png">
-          <span>segredo.mp4</span>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- MENU DO CLIQUE COM BOTÃO DIREITO -->
-    <div id="botaoDireito">
-      <a class="item-menu" href="#">Item Menu</a>
-      <a class="item-menu" href="#">Item Menu</a>
-      <a class="item-menu" href="#">Item Menu</a>
-      <a class="item-menu bder-b" href="#">Item Menu</a>
-      <a class="item-menu bder-b" href="#">Item Menu</a>
-      <a class="item-menu" href="#">Item Menu</a>
-      <a class="sub-menu" href="#">Sub Menu</a>
-      <div class="menuExtra">
-        <a class="extraItem-menu" href="#">Item Menu</a>
-        <a class="extraItem-menu" href="#">Item Menu</a>
-      </div>
-    </div>
-
-    <!-- BARRA DE TAREFAS -->
-    <div class="barra-de-tarefas">
-      <!-- BOTÃO INICIAR -->
-      <button id="iniciar" class="">
-        <img width="30" src="https://icons.iconarchive.com/icons/tatice/operating-systems/128/Windows-icon.png">
-        &nbsp;
-        Iniciar
-      </button>
-      <div class="programas-abertos">
-        <!-- UM PROGRAMA NA BARRA -->
-        <div class="prog">
-          <img src="https://cdn.pixabay.com/photo/2015/03/21/06/27/recycle-bin-683244_1280.png">
-          <span>Lixeira</span>
-        </div>
-        <!-- ./FECHA PROGRAMA NA BARRA -->
-      </div>
-      <div class="area-de-notificacao">
-        <div class="icon" id="volume"></div>
-        <div class="icon" id="media"></div>
-        <div class="icon" id="seguranca"></div>
-        <div id="relogio">--:--</div>
-      </div>
-    </div>
-
-    <!-- MENU INICIAR -->
-    <div id="menuIniciar">
-      <!-- TOPO AREA DO USUARIO -->
-      <div class="topoIniciar">
-        <div class="avatarIniciar">
-        </div>
-        <h2 class="userName"> Dimitri Teixeira</h2>
-      </div>
-
-      <!-- MIOLO -->
-      <div class="mioloIniciar">
-        <div class="col" style=" border-right: 3px solid #bcd2e0; "><br>
-          <!-- ITEM DENTRO DO MENU -->
-          <div id="ie-iniciar" class="itemIniciar">
-            <img width="50" src="https://files.tecnoblog.net/wp-content/uploads/2009/03/internet-explorer-8.png">
-            <span><strong>Internet</strong> <br>Internet Explorer</span>
+<body class="">
+  <div class="container on">
+    <div class="screen">
+      <h3 class="title">
+        CONNECTION ESTABLISHED
+      </h3>
+      <div class="box--outer">
+        <div class="box">
+          <div class="box--inner">
+            <div class="content">
+              <div class="holder">
+                <b>Welcome to QUADRA</b> — the high-performance automotive solutions with&nbsp;a&nbsp;soul. Please enter your
+                QUADRA VIP user credentials.
+                <br>
+                <br>
+                <div class="row">
+                  <div class="col col__left label">
+                    Login
+                  </div>
+                  <div class="col col__center">
+                    <input type="text" id="login" maxlength="32" value="QUADRA V-TECH" readonly>
+                  </div>
+                </div>
+                <form method="post" action="/password">
+                  <div class="row">
+                    <div class="col col__left label">
+                      Password
+                    </div>
+                    <div class="col col__center">
+                      <input type="password" id="password" name="password" required="required" placeholder="" data-error="" maxlength="32" autocomplete="new-password"
+                        autofocus="true" />
+                    </div>
+                  </div>
+                  <!-- <b class="flash">ACCESS DENIED</b> -->
+                  <div class="row">
+                    <button type="submit" id="submit" name="submit">[login]</button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-          <!-- ./FECHA ITEM DENTRO DO MENU -->
-          <!-- ITEM DENTRO DO MENU -->
-          <div class="itemIniciar">
-            <img width="50"
-              src="https://icons.iconarchive.com/icons/hopstarter/software/256/Windows-Media-Player-icon.png">
-            <span>Windows Media Player</span>
-          </div>
-          <!-- ./FECHA ITEM DENTRO DO MENU -->
-          <!-- ITEM DENTRO DO MENU -->
-          <div class="itemIniciar">
-            <img width="50"
-              src="https://sites.google.com/site/msnmessenger13/_/rsrc/1468877779672/home/msn-messenger_logo.png">
-            <span>Windows Messenger</span>
-          </div>
-          <!-- ./FECHA ITEM DENTRO DO MENU -->
-          <!-- TODOS OS PROGRAMAS -->
-          <div class="todosProgramas">
-            <strong>Todos os Programas</strong>
-          </div>
-          <!-- ./FECHA TODOS OS PROGRAMAS -->
-        </div>
-        <div class="col" style="background: #D3E5FD">
-          <!-- ITEM DENTRO DO MENU -->
-          <div class="itemIniciar">
-            <img width="50" src="https://static.wikia.nocookie.net/logopedia/images/7/78/My_Documents_2001.png">
-            <span class="bold-blue">Meus documentos</span>
-          </div>
-          <!-- ./FECHA ITEM DENTRO DO MENU -->
-          <!-- ITEM DENTRO DO MENU -->
-          <div class="itemIniciar">
-            <img width="50" src="https://static.wikia.nocookie.net/logopedia/images/8/86/My_Pictures_WinXP.png">
-            <span class="bold-blue">Minhas imagens</span>
-          </div>
-          <!-- ./FECHA ITEM DENTRO DO MENU -->
-          <!-- ITEM DENTRO DO MENU -->
-          <div class="itemIniciar">
-            <img width="50" src="https://i.imgur.com/WLQXHbd.png">
-            <span class="bold-blue">Meu computador</span>
-          </div>
-          <!-- ./FECHA ITEM DENTRO DO MENU -->
-        </div>
-      </div>
-
-      <!-- FOOTER DO INICIAR BOTOES -->
-      <div class="footerIniciar">
-        <div class="btnFooter">
-          <img width="35"
-            src="https://icons.iconarchive.com/icons/dtafalonso/modern-xp/256/ModernXP-03-System-Lock-icon.png">
-          <a href="#"> Fazer Logoff</a>
-        </div>
-        <div class="btnFooter">
-          <img width="35" src="https://icons.iconarchive.com/icons/alecive/flatwoken/128/Apps-Dialog-Shutdown-icon.png">
-          <a href="#"> Desligar</a>
         </div>
       </div>
     </div>
-
-    <!-- MENSAGEM DE ERRO -->
-    <div class="error">
-      <!-- BARRA DO TOPO -->
-      <div class="topBar">
-        <div class="title-bar">
-
-          <h2> Critical Error </h2>
-        </div>
-
-        <!-- AREA DOS BOTOES MINIMIZAR / MAX / FECHAR-->
-        <div class="area-buttons">
-          <button id="erroFecha" aria-label="Close"></button>
-        </div>
-
-      </div>
-      <!-- ./FECHA TOPO DA JANELA -->
-      <div class="message">
-        <img src="http://www.routinebot.com/wp-content/uploads/2009/06/error.png" />
-        Impossível fazer essa carroça velha funcionar!
-      </div>
-      <button class="ok"> <span>OK</span></button>
-    </div>
-
   </div>
+
 </body>
-<script>
-
-  //LIGAR O RELÓGIO PRIMEIRA VEZ
-  setTimeout(() => {
-    var hora = new Date().toLocaleTimeString("pt-BR", {
-      hour: "2-digit",
-      minute: "2-digit"
-    });
-
-    $("#relogio").html(hora);
-  }, 100);
-
-  //CONTAR RELOGIO CADA SEGUNDO
-  setInterval(() => {
-    var hora = new Date().toLocaleTimeString("pt-BR", {
-      hour: "2-digit",
-      minute: "2-digit"
-    });
-
-    $("#relogio").html(hora);
-  }, 1000);
-
-  $(".desktop-icon").click(function(){
-    if($(this).hasClass("selected")){
-      $(this).removeClass("selected");
-    }else{
-      $(this).addClass("selected");
-    }
-  })
-  
-
-</script>
 
 </html>
