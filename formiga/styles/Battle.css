@@ -1,0 +1,96 @@
+.Battle {
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background-image: url(/images/maps/StreetBattle.png);
+  background-size: cover;
+  image-rendering: pixelated;
+}
+.Battle.green-kitchen {
+  background-image: url(/images/maps/GreenKitchenBattle.png);
+}
+.Battle.dining-room {
+  background-image: url(/images/maps/DiningRoomBattle.png);
+}
+
+
+.Battle_hero, .Battle_enemy {
+  position: absolute;
+  transform: scale(2);
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  background: url(/images/characters/shadow.png) no-repeat no-repeat;
+}
+.Battle_hero img, .Battle_enemy img {
+  pointer-events: none;
+}
+.Battle_hero {
+  bottom: 57px;
+  left: 1px;
+}
+.Battle_hero img {
+  transform: translateY(-64px); /* Nudge hero spritesheet */
+}
+.Battle_enemy {
+  top: 42px;
+  right: -1px;
+}
+
+/* Animations */
+@keyframes battle-damage-blink {
+  to {
+    visibility: hidden; 
+  } 
+}
+.battle-damage-blink {
+  animation: battle-damage-blink 0.3s steps(2, start) infinite;
+}
+
+@keyframes battle-spin-right {
+  0% { transform: translate3d(0,0,0) rotate(0deg) scale(2)}
+  25% { transform: translate3d(155px,-30px,0) rotate(45deg) scale(2)}
+  100% { transform: translate3d(0,0,0) scale(2)}
+}
+.battle-spin-right {
+  animation: battle-spin-right 0.8s;
+}
+@keyframes battle-spin-left {
+  0% { transform: translate3d(0,0,0) rotate(0deg) scale(2)}
+  25% { transform: translate3d(-100%, 25%,0) rotate(45deg) scale(2)}
+  100% { transform: translate3d(0,0,0) scale(2)}
+}
+.battle-spin-left {
+  animation: battle-spin-left 0.8s;
+}
+
+.glob-orb {
+  position: absolute;
+  width:32px;
+  height:32px;
+}
+@keyframes battle-glob-right {
+  0% { transform: translate3d(0,0,0) scale(0.5); opacity: 1}
+  50% { transform: translate3d(10px,-80px,0) scale(1); opacity: 1; }
+  80% {  transform: translate3d(149px, -47px, 0) scale(1);opacity:1 }
+  100% {  transform: translate3d(149px, -47px, 0) scale(3);opacity:0 }
+}
+.battle-glob-right {
+  left: 70px;
+  top: 104px;
+  animation: battle-glob-right 1s forwards;
+}
+
+@keyframes battle-glob-left {
+  0% { transform: translate3d(0,0,0) scale(0.5); opacity: 1}
+  50% { transform: translate3d(-10px,-50px,0) scale(1); opacity: 1; }
+  80% {  transform: translate3d(-174px, 47px, 0) scale(1);opacity:1 }
+  100% {  transform: translate3d(-174px, 47px, 0) scale(3);opacity:0 }
+}
+.battle-glob-left {
+  left: 227px;
+  top: 56px;
+  animation: battle-glob-left 1s forwards;
+}
